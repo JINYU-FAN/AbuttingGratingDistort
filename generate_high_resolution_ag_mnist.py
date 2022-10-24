@@ -49,5 +49,5 @@ test_set = datasets.MNIST('./raw_datasets/', train=False, transform = transform,
 images, labels = test_set[0]
 images = images.unsqueeze(0)
 
-ag_images = ag_corrupt_high_resolution(images, threshold=0.5, interval=8, direction=(1,0))
+ag_images = ag_corrupt_high_resolution(images, threshold=0.5, interval=8, direction=(1,0))  # alter the interval and direction
 torchvision.utils.save_image(ag_images[0], 'high_resolution_ag_mnist_sample.png')

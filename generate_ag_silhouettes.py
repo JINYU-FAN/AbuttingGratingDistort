@@ -43,5 +43,5 @@ def ag_corrupt_silhouettes(imgs, threshold=0.5, interval=2, direction=(1,0)):
 transform = transforms.Compose([transforms.ToTensor()])
 img = Image.open("./raw_datasets/silhouettes/airplane/airplane1.png")
 img = transform(img).unsqueeze(0) # expand the dimension of the image to 
-ag_images = ag_corrupt_silhouettes(img, threshold=0.5, interval=8, direction=(1,0))    
+ag_images = ag_corrupt_silhouettes(img, threshold=0.5, interval=8, direction=(1,0))  # alter the interval and direction    
 torchvision.utils.save_image(ag_images, 'ag_silhouette_sample.png')

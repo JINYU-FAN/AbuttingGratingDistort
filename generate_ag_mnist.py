@@ -45,5 +45,5 @@ transform = transforms.Compose([transforms.ToTensor()])
 test_set = datasets.MNIST('./raw_datasets/', train=False, transform = transform, download=False)
 images, labels = test_set[0]
 images = images.unsqueeze(0)
-ag_images = ag_corrupt_28(images, threshold=0.5, interval=4, direction=(1,0))
+ag_images = ag_corrupt_28(images, threshold=0.5, interval=4, direction=(1,0)) # alter the interval and direction
 torchvision.utils.save_image(ag_images[0], 'ag_mnist_sample.png')
